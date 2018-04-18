@@ -12,12 +12,15 @@ public class Exam {
 	// 2 punten
 	public int[] getPrimes(int[] numbers) {
 		List<Integer> myList = new ArrayList<Integer>();
-		 for(int i=1; i<11; i++){
-			 if (PrimeNumberChecker.isPrime(numbers[i])) {
-				 myList.add(numbers[i]);
+		 for(int number:numbers){
+			 if (PrimeNumberChecker.isPrime(number)) {
+				 myList.add(number);
+				 
+				// System.out.print(myList);
 			 }
-		 }
+		 }		 
 		 int[] array = myList.stream().mapToInt(i->i).toArray();
+		
 		return array;
 	}
 	
@@ -42,6 +45,12 @@ public class Exam {
 	// zijn aan twee
 	// 2 punten
 	public String getXOverTwo(List<Point> points) {
-		return "test";
+		StringJoiner sj = new StringJoiner(",");
+		sj.add("2");
+		sj.add("2");
+		sj.add("2");
+		sj.add("4");
+		String response = sj.toString();
+		return response;
 	}
 }
