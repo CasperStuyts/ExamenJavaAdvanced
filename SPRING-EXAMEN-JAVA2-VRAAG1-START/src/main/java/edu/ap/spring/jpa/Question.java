@@ -5,12 +5,14 @@ import javax.persistence.Entity;
 @Entity
 public class Question {
 
+	public String identifier;
+	public String askedquestion;
 	public Question(String string, String string2) {
-		// TODO Auto-generated constructor stub
+		identifier = string;
+		askedquestion = string2;
 	}
 
 	public String getAnswer() {
-		// TODO Auto-generated method stub
-		return null;
+		return "test";
 	}
 }
